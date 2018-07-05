@@ -1,0 +1,29 @@
+sudo: required
+os: linux
+
+git:
+  depth: 9999
+
+language: c
+
+compiler:
+  - gcc
+  - clang
+
+notifications:
+  email:
+  - open-identity-platform-openam@googlegroups.com
+
+branches:
+  except:
+    - /[0-9]+\.[0-9]+\.[0-9]+$/
+
+before_install:
+  - sudo apt-get install -qq -y libpcre3-dev libbz2-dev
+
+install:
+  - ./prepare-apache.sh
+
+script:
+  - make apache22zip && mv build/*.zip .
+  - make apachezip && mv build/*.zip .
