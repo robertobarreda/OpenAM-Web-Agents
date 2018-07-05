@@ -1,14 +1,52 @@
 sudo: required
-os: linux
 
 git:
   depth: 9999
 
 language: c
 
-compiler:
-  - gcc
-  - clang
+matrix:
+  include:
+  - os: linux
+    compiler: gcc
+    services:
+      - docker
+    before_deploy: 
+      - git config --local user.name "Open Identity Platform Community" && git config --local user.email "open-identity-platform-openam@googlegroups.com"
+      - git checkout -f $TRAVIS_BRANCH
+      - git tag -f $git_version && git tag -d $git_version
+      - git push --quiet --force https://$GITHUBKEY@github.com/$TRAVIS_REPO_SLUG.git >/dev/null 2>&1
+      - git push --quiet --force https://$GITHUBKEY@github.com/$TRAVIS_REPO_SLUG.git $git_version >/dev/null 2>&1
+    deploy:
+      provider: releases
+      draft: false
+      prerelease: false
+      target_commitish: $(git rev-list -n 1 $git_version)
+      tag_name: $git_version
+      name: $git_version
+      body: "compare: $(git rev-list -n 1 $git_version_last)...$(git rev-list -n 1 $git_version)"
+      api_key:
+       secure: SjVM74aEOKoFNVcs1EifBIz6VoABrUWB358VRX3hc7Fakvq1p7Ze3lQ99PTXIwoaf4K3d4kwxe/KJjhKq/imDgcjyeRoqEsIPj3ijPnjM6ew5Ic2v+lV+vxjgdgFUOFNUZ/TXn+KepPtsFEOeZbJ2O5CHm2dBXFUztlT+GN2UfY2Xarr3ek2rs7l95+YLoCgN4GhkXvQDKSEtpWxxSG/C3WH3kS6KqAMu+sAQy6FBqGNbEz7fMvoVhqeq5F0pvczJKaKuxAmk0OJFaydQH8rpC1s19JVmu5SN9sVRjkj8gj2Q1cAxIn1v96DDNgSmGmD3KptucWzP06AxsZs2lajjSJc72Lf75hZ8/u/W0e9Kc4sMj5lo4NWdGS0o5J5JEmP62ds1k9f6OIr5EEsRKz7I5W9pufcECLCKDPc/wCOoLxj+X4xuTzoXLmTqpo7LlLbHtmboHcLHrZPpbtLneqhWOHzUq55uC+tHAa+IDDpYAO+SbKbeMgtLModwaP0m8FFmM2MZhfjXzxlDnPpxLPIAtu8dsdW9Y3thXBLQEXBg50B2Bsadh2TDowGFq+ZMadRTx85+WyI6fETxlMayb1wpozYixFOzqokRsqX+dGgLe9H7zMm5u5+SyMMlWR76iW4KtZWuuqwg86lBHh5MVd8vNmv4yRu4cY3YvrFguHixhA=
+      skip_cleanup: true
+      overwrite: true
+      file_glob: true
+      file: 
+        - "*.zip"
+      on:
+        repo: OpenIdentityPlatform/OpenAM-Web-Agents
+        tags: false
+        branch: 
+          - master
+          - travis
+    after_deploy:
+      - echo 'after_deploy'
+      - echo 'build and push Docker'
+      -   #docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+      -   #docker build ./openam-distribution/openam-distribution-docker/target -t $DOCKER_USERNAME/openam -t $DOCKER_USERNAME/openam:$git_version
+      -   #docker push $DOCKER_USERNAME/openam-apache:$git_version
+      -   #docker push $DOCKER_USERNAME/openam-apache
+  - os: linux
+    compiler: clang
 
 notifications:
   email:
