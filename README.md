@@ -1,4 +1,4 @@
-## OpenAM Java EE Policy Agents
+## OpenAM Web Policy Agents
 [![Latest release](https://img.shields.io/github/release/OpenIdentityPlatform/OpenAM-Web-Agents.svg)](https://github.com/OpenIdentityPlatform/OpenAM-Web-Agents/releases)
 [![Build Status](https://travis-ci.org/OpenIdentityPlatform/OpenAM-Web-Agents.svg)](https://travis-ci.org/OpenIdentityPlatform/OpenAM-Web-Agents)
 [![Issues](https://img.shields.io/github/issues/OpenIdentityPlatform/OpenAM-Web-Agents.svg)](https://github.com/OpenIdentityPlatform/OpenAM-Web-Agents/issues)
@@ -36,7 +36,7 @@ make apachezip && ls build/*.zip
 ## Contributing
 Please, make [Pull request](https://github.com/OpenIdentityPlatform/OpenAM-Web-Agents/pulls)
 
-## Thanks for OpenAM Java Policy Agent
+## Thanks for OpenAM Web Policy Agent
 * Sun Access Manager
 * Sun OpenSSO
 * Oracle OpenSSO
