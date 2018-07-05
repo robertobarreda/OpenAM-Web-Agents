@@ -20,7 +20,7 @@ LINUX_MK_INCLUDED := true
 CC := gcc
 SHARED := -shared
 
-CFLAGS  += -fPIC -pthread -std=gnu99 -D_REENTRANT -DLINUX -D_GNU_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector \
+CFLAGS  += -fPIC -pthread -std=gnu99 -D_REENTRANT -DLINUX -D_GNU_SOURCE -D_FORTIFY_SOURCE=2 -fstack-protector-all \
 	    -Wno-unused-value -Wno-deprecated-declarations
 	
 ifdef DEBUG
@@ -37,7 +37,7 @@ else
  LDFLAGS += -m32
 endif
 
-LDFLAGS += -Wl,-rpath,'$$ORIGIN/../lib' -Wl,-rpath,'$$ORIGIN' -Wl,--no-as-needed -lpthread -lresolv -lrt -ldl
+LDFLAGS += -Wl,-rpath,'$$ORIGIN/../lib' -Wl,-rpath,'$$ORIGIN' -Wl,--no-as-needed -Wl,-z,now -Wl,-z,relro  -lpthread -lresolv -lrt -ldl
 
 libopenam: $(OUT_OBJS)
 	@$(ECHO) "[*** Creating "$@" shared library ***]"

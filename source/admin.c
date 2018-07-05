@@ -35,7 +35,7 @@
 #endif
 
 #ifdef AM_BINARY_LICENSE
-#define LICENSE_FILE ".."FILE_PATH_SEP"legal"FILE_PATH_SEP"Forgerock_License.txt"
+#define LICENSE_FILE ".."FILE_PATH_SEP"legal"FILE_PATH_SEP"CDDLv1.0.txt"
 #else
 #define LICENSE_FILE ".."FILE_PATH_SEP"legal"FILE_PATH_SEP"CDDLv1.0.txt"
 #endif
