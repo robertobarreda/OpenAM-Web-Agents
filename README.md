@@ -14,8 +14,8 @@ OpenAM Web Policy Agents is an OpenAM add-on component that functions as a Polic
 This project is licensed under the [Common Development and Distribution License (CDDL)](https://github.com/OpenIdentityPlatform/OpenAM-Web-Agents/blob/master/LICENSE.md). 
 
 ## Downloads 
-* [OpenAM Web Policy Agent (Apache 2.2 Linux x64 ZIP)](https://github.com/OpenIdentityPlatform/OpenAM-Web-Agents/releases) (All OS)
-* [OpenAM Web Policy Agent (Apache 2.4 Linux x64 ZIP)](https://github.com/OpenIdentityPlatform/OpenAM-Web-Agents/releases) (All OS)
+* [OpenAM Web Policy Agent (Apache 2.2 Linux x64 ZIP)](https://github.com/OpenIdentityPlatform/OpenAM-Web-Agents/releases)
+* [OpenAM Web Policy Agent (Apache 2.4 Linux x64 ZIP)](https://github.com/OpenIdentityPlatform/OpenAM-Web-Agents/releases)
 
 ## How-to build
 ```bash
