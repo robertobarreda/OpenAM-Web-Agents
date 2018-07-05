@@ -26,7 +26,7 @@ matrix:
       name: $git_version
       body: "compare: $(git rev-list -n 1 $git_version_last)...$(git rev-list -n 1 $git_version)"
       api_key:
-       secure: SjVM74aEOKoFNVcs1EifBIz6VoABrUWB358VRX3hc7Fakvq1p7Ze3lQ99PTXIwoaf4K3d4kwxe/KJjhKq/imDgcjyeRoqEsIPj3ijPnjM6ew5Ic2v+lV+vxjgdgFUOFNUZ/TXn+KepPtsFEOeZbJ2O5CHm2dBXFUztlT+GN2UfY2Xarr3ek2rs7l95+YLoCgN4GhkXvQDKSEtpWxxSG/C3WH3kS6KqAMu+sAQy6FBqGNbEz7fMvoVhqeq5F0pvczJKaKuxAmk0OJFaydQH8rpC1s19JVmu5SN9sVRjkj8gj2Q1cAxIn1v96DDNgSmGmD3KptucWzP06AxsZs2lajjSJc72Lf75hZ8/u/W0e9Kc4sMj5lo4NWdGS0o5J5JEmP62ds1k9f6OIr5EEsRKz7I5W9pufcECLCKDPc/wCOoLxj+X4xuTzoXLmTqpo7LlLbHtmboHcLHrZPpbtLneqhWOHzUq55uC+tHAa+IDDpYAO+SbKbeMgtLModwaP0m8FFmM2MZhfjXzxlDnPpxLPIAtu8dsdW9Y3thXBLQEXBg50B2Bsadh2TDowGFq+ZMadRTx85+WyI6fETxlMayb1wpozYixFOzqokRsqX+dGgLe9H7zMm5u5+SyMMlWR76iW4KtZWuuqwg86lBHh5MVd8vNmv4yRu4cY3YvrFguHixhA=
+       secure: l0E8q0lb5cKNAZzvppWs6Jx8e6iq+kJvoEqk0/JKH1KV7cUdNzEjS/QORHeswjl0JLeWIsThN3A83ZO7bAM1jarfTeEQpSTxjFerW7S5dvpX8EmRGRLC6POqm8Y/YdT88QqSLwhmTHIdBo5EwJXrx1qMFHtfRfU3ji7U8mPRYzIdwXc0yWBDPj5FAw9olWZSldW9jegrDQSpK7ghZ4FNjqh7nqOCBkOKZdDvGlemX8lVK/Am1oO/jaLHYsIZgFEXE0WvAw9sZbCJfwxCv6IYn/RFWDXN6CHLUz/oXmhhZwrZN/As/0jQwvkHNRY6Hyz7um+a4eXcvqbid1CiO316Pj5yNMb1hyqN1iQWfy4acxgFV/J+wMOHsnIJHvJKoMRCCCa46ZPHAThZljVR7/7D8VB7PP0wpfod4HzoZ6/D5oMKOLzTvIWOpOoFXY5Kx/ji+g5o4taVRkINoYTshAUt7ob4/Et/+qeUzisxDizDXgep3B3t4BNl4a1M0e30/USgdjlEZ+D8dAFGO/IxIh+kd29OTf1Wqeg73CxEg0NSdzxIJP4ls8Zdw9UTTW9Fsv6SG7YjmYa1ISne5/mNTcdeBepO8YFdGUXCnBI0cjv1hTqwMRzGK8s98DdiuDu9YWy04mbklF7Sj0jgnpA3NQivIKyVEr+cA49pf5v6APxRuQs=
       skip_cleanup: true
       overwrite: true
       file_glob: true
