@@ -16,6 +16,7 @@ This project is licensed under the [Common Development and Distribution License 
 ## Downloads 
 * [OpenAM Web Policy Agent (Apache 2.2 Linux x64 ZIP)](https://github.com/OpenIdentityPlatform/OpenAM-Web-Agents/releases)
 * [OpenAM Web Policy Agent (Apache 2.4 Linux x64 ZIP)](https://github.com/OpenIdentityPlatform/OpenAM-Web-Agents/releases)
+* [OpenAM Web Policy Agent (IIS  Windows x32/x64 ZIP)](https://ci.appveyor.com/api/buildjobs/cnebrw2f43my9vxr/artifacts/IIS_WINNT_4.1.0.zip)
 
 ## How-to build
 ```bash
